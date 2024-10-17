@@ -27,7 +27,7 @@ To run this project locally, follow these steps:
 ### 1. Clone the Repository
 
 ```bash
-git clone (https://github.com/akshat-kul/Create-Paper---Extract-Info---ZuAI-Task.git)
+git clone https://github.com/akshat-kul/Create-Paper---Extract-Info---ZuAI-Task.git
 cd <repository_name>
 ```
 
@@ -42,4 +42,18 @@ venv/Scripts/activate
 
 On Linux
 source venv/bin/activate
+```
+
+### 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Set Up MongoDB Ensure you have MongoDB installed and running. You can set up a local instance or use a cloud service like MongoDB Atlas.
+
+### 3. Run the App
+
+```bash
+python main.py
 ```
