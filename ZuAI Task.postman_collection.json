@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "1523d4cf-9507-4b35-8962-352e1a4fd377",
+		"name": "ZuAI Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30817750"
+	},
+	"item": [
+		{
+			"name": "Papers",
+			"item": [
+				{
+					"name": "Create New Paper",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"title\": \"Sample Paper Title\",\r\n\"type\": \"previous_year\",\r\n\"time\": 180,\r\n\"marks\": 100,\r\n\"params\": {\r\n\"board\": \"CBSE\",\r\n\"grade\": 10,\r\n\"subject\": \"Maths\"\r\n},\r\n\"tags\": [\r\n\"algebra\",\r\n\"geometry\"\r\n],\r\n\"chapters\": [\r\n\"Quadratic Equations\",\r\n\r\n\"Triangles\"\r\n],\r\n\"sections\": [\r\n{\r\n\"marks_per_question\": 5,\r\n\"type\": \"default\",\r\n\"questions\": [\r\n{\r\n\"question\": \"Solve the quadratic equation: x^2 + 5x + 6 = 0\",\r\n\"answer\": \"The solutions are x = -2 and x = -3\",\r\n\"type\": \"short\",\r\n\"question_slug\": \"solve-quadratic-equation\",\r\n\"reference_id\": \"QE001\",\r\n\"hint\": \"Use the quadratic formula or factorization method\",\r\n\"params\": {}\r\n},\r\n{\r\n\"question\": \"In a right-angled triangle, if one angle is 30°, what is the other acute angle?\",\r\n\"answer\": \"60°\",\r\n\"type\": \"short\",\r\n\"question_slug\": \"right-angle-triangle-angles\",\r\n\"reference_id\": \"GT001\",\r\n\"hint\": \"Remember that the sum of angles in a triangle is 180°\",\r\n\"params\": {}\r\n}\r\n]\r\n}\r\n]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/papers",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"papers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Paper Details",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Update Paper Details",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"title\": \"Paper Title 1\",\r\n\"type\": \"next_year\",\r\n\"time\": 181,\r\n\"marks\": 100,\r\n\"params\": {\r\n\"board\": \"CBSE\",\r\n\"grade\": 10,\r\n\"subject\": \"Maths\"\r\n},\r\n\"tags\": [\r\n\"algebra\",\r\n\"geometry\"\r\n],\r\n\"chapters\": [\r\n\"Quadratic Equations\",\r\n\r\n\"Triangles\"\r\n],\r\n\"sections\": [\r\n{\r\n\"marks_per_question\": 5,\r\n\"type\": \"default\",\r\n\"questions\": [\r\n{\r\n\"question\": \"Solve the quadratic equation: x^2 + 5x + 6 = 0\",\r\n\"answer\": \"The solutions are x = -2 and x = -3\",\r\n\"type\": \"short\",\r\n\"question_slug\": \"solve-quadratic-equation\",\r\n\"reference_id\": \"QE001\",\r\n\"hint\": \"Use the quadratic formula or factorization method\",\r\n\"params\": {}\r\n},\r\n{\r\n\"question\": \"In a right-angled triangle, if one angle is 30°, what is the other acute angle?\",\r\n\"answer\": \"60°\",\r\n\"type\": \"short\",\r\n\"question_slug\": \"right-angle-triangle-angles\",\r\n\"reference_id\": \"GT001\",\r\n\"hint\": \"Remember that the sum of angles in a triangle is 180°\",\r\n\"params\": {}\r\n}\r\n]\r\n}\r\n]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/papers/671110a6c8a4a11c98519299",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"papers",
+								"671110a6c8a4a11c98519299"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Paper",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Extract",
+			"item": [
+				{
+					"name": "Extract Data from PDF",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/extract/pdf",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"extract",
+								"pdf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Extract Data from Text",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/extract/pdf",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"extract",
+								"pdf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Status of Task ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/tasks/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"tasks",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "Uh7UO37hF!R7X98OEMDuT-cw?oZuKUC9uWxBqVqf44TgeOeDFTgU6lizV5dAxse",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "x-api-key",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
