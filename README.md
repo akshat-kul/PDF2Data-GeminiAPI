@@ -27,5 +27,19 @@ To run this project locally, follow these steps:
 ### 1. Clone the Repository
 
 ```bash
-git clone <repository_url>
+git clone (https://github.com/akshat-kul/Create-Paper---Extract-Info---ZuAI-Task.git)
 cd <repository_name>
+```
+
+### 2. Set up the virtual environment
+
+```bash
+Install the virtualenv library, if installed then Create virtual environment using
+virtualenv venv
+Then activate it using:
+On Windows
+venv/Scripts/activate
+
+On Linux
+source venv/bin/activate
+```
