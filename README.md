@@ -37,6 +37,7 @@ cd <repository_name>
 Install the virtualenv library, if installed then Create virtual environment using
 virtualenv venv
 Then activate it using:
+
 On Windows
 venv/Scripts/activate
 
