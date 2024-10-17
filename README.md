@@ -1,2 +1,31 @@
 # Create-Paper---Extract-Info---ZuAI-Task
 The Sample Paper Management System is a FastAPI application designed to create, retrieve, update, and delete sample papers for academic purposes. The application allows users to store paper details in a MongoDB database and interact with these records through a RESTful API.
+
+## Features
+
+- **Extract Information from PDF Files**: Utilize the Gemini API to extract relevant details from PDF files and store them in the papers collection.
+- **Extract Information from Plain Text**: Use the Gemini API to extract information from plain text prompts, then store the data in the papers collection.
+- **Task Management**: Use task IDs to fetch details of ongoing, failed, or completed tasks related to paper creation and processing.
+- **Create a Sample Paper**: Add new sample papers by sending JSON data including title, type, time, marks, parameters, tags, chapters, and sections.
+- **Retrieve a Sample Paper**: Get details of a specific paper by its ID.
+- **Update a Sample Paper**: Modify the details of an existing paper.
+- **Delete a Sample Paper**: Remove a paper from the database.
+
+## Technologies Used
+
+- **FastAPI**: For building the RESTful API.
+- **MongoDB**: For storing sample paper data.
+- **Pydantic**: For data validation and serialization.
+- **Redis**: Used for caching GET operations to improve performance.
+- **Gemini API**: Utilized for extracting information from PDF files and plain text.
+- **pytest**: For testing the API endpoints.
+
+## Getting Started
+
+To run this project locally, follow these steps:
+
+### 1. Clone the Repository
+
+```bash
+git clone <repository_url>
+cd <repository_name>
